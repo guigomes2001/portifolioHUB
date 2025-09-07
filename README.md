@@ -69,8 +69,6 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 - **SAW - Sistema de Atendimento Web** - Sistema enterprise para operadoras de saúde
 - **Manutenção e Evolução** - Aplicações corporativas em produção
 
-[🔗 Acesse a seção de projetos](#projects)
-
 ---
 
 ## 📜 Certificações
@@ -82,7 +80,7 @@ Possuo **12 certificações** em tecnologias e desenvolvimento, incluindo:
 - 🔄 Versionamento com Git e GitHub (DIO)
 - 🧠 Inteligência Emocional e Liderança (Estácio)
 
-[📑 Ver todos os certificados](#certificates)
+[📑 Ver todos os certificados](https://github.com/guigomes2001/portifolioHUB/tree/main/assets/docs/certificados)
 
 ---
 
