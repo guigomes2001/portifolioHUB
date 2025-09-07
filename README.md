@@ -110,7 +110,7 @@ Possuo **12 certificações** em tecnologias e desenvolvimento, incluindo:
 ---
 
 ## 📞 Como Contribuir ou Entrar em Contato
-1. Acesse o [portfólio online](https://guigomes2001.github.io)
+1. Acesse o [portfólio online]([https://guigomes2001.github.io](https://github.com/guigomes2001))
 2. Utilize os links de contato na seção dedicada
 3. Conecte-se via LinkedIn para oportunidades profissionais
 4. Explore os projetos e dê feedback
