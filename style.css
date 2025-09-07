@@ -71,6 +71,22 @@ body {
     color: var(--text-color);
     font-weight: 500;
     transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
@@ -82,12 +98,16 @@ body {
     font-size: 1.2rem;
     color: var(--text-color);
     transition: var(--transition);
+    background: none;
+    border: none;
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .hamburger span {
@@ -98,7 +118,7 @@ body {
     transition: var(--transition);
 }
 
-/* Hero Section */
+/* Hero Section - CORREÇÕES APLICADAS */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -117,10 +137,13 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .hero-text {
     flex: 1;
+    min-width: 300px;
     max-width: 600px;
 }
 
@@ -132,11 +155,14 @@ body {
 .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -146,6 +172,9 @@ body {
     font-weight: 600;
     transition: var(--transition);
     display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
 .btn.primary {
@@ -161,7 +190,7 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image {
@@ -169,6 +198,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 
 .profile-photo-container {
@@ -186,6 +216,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+    display: block;
 }
 
 .photo-overlay {
@@ -206,7 +237,7 @@ body {
 }
 
 .profile-photo-container:hover .profile-photo {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .scroll-indicator {
@@ -259,6 +290,7 @@ body {
 .about-content p {
     font-size: 1.1rem;
     margin-bottom: 3rem;
+    line-height: 1.8;
 }
 
 .about-highlights {
@@ -279,6 +311,7 @@ body {
 
 .highlight:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .highlight i {
@@ -306,6 +339,7 @@ body {
 
 .skill-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .skill-card i {
@@ -331,6 +365,12 @@ body {
     border-radius: 10px;
     box-shadow: var(--shadow);
     margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.coming-soon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .coming-soon i {
@@ -372,6 +412,7 @@ body {
 .contact-card:hover {
     transform: translateY(-5px);
     color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card i {
@@ -391,6 +432,8 @@ footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .social-links {
@@ -406,6 +449,7 @@ footer .container {
 
 .social-links a:hover {
     color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 /* Animations */
@@ -439,6 +483,10 @@ footer .container {
     .profile-photo-container {
         width: 250px;
         height: 250px;
+    }
+    
+    .hero-text h2 {
+        font-size: 2.5rem;
     }
 }
 
@@ -477,6 +525,18 @@ footer .container {
         flex-direction: column;
         gap: 1rem;
     }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
 }
 
 @media (max-width: 480px) {
@@ -501,5 +561,19 @@ footer .container {
     .contact-card {
         width: 100%;
         max-width: 250px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .navbar {
+        padding: 1rem;
     }
 }
