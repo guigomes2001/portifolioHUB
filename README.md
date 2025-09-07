@@ -16,6 +16,8 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 ## 🔗 Contatos
 - 💼 [LinkedIn](https://www.linkedin.com/in/guilherme-gomes-824880279/)  
 - 📸 [Instagram](https://www.instagram.com/gui_gomes_18/)  
+- 📧 [E-mail](mailto:seu-email@exemplo.com)
+- 🌐 [Portfólio Online](https://guigomes2001.github.io)
 
 ---
 
@@ -24,10 +26,11 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 
 ---
 
-## 💼 Experiência
-- 👨‍💻 Atualmente atuando como **Desenvolvedor Java**  
-- 🌱 Experiência em projetos pessoais (públicos e privados neste repositório)  
-- 🚧 Em constante evolução, com foco em ampliar habilidades técnicas e práticas
+## 💼 Experiência Profissional
+- 👨‍💻 **Desenvolvedor Java** - TRIX Tecnologia Inteligente
+- 🌱 Especializado em **Struts Framework** e **Spring Boot**
+- 🏗️ Experiência com arquitetura **MVC (Model-View-Controller)**
+- ⚙️ Implementação de casos de uso alinhados à **regra de negócio**
 
 ---
 
@@ -35,13 +38,18 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 - 🎯 Foco e determinação nos objetivos  
 - 💪 Resiliência diante de desafios  
 - 📚 Curiosidade e paciência para aprendizado contínuo  
+- 🤝 Trabalho em equipe e comunicação eficaz
 
 ---
 
 ## 💻 Habilidades Técnicas
-- ☕ Desenvolvimento em **Java 8**, **Struts Framework** e **Spring Boot**  
-- 🏗️ Arquitetura **MVC (Model-View-Controller)**  
-- ⚙️ Implementação de casos de uso alinhados à **regra de negócio**  
+- ☕ **Java 8** - Desenvolvimento backend
+- 🚀 **Spring Boot** - Framework moderno para aplicações Java
+- 🏗️ **Struts Framework** - Framework para aplicações web enterprise
+- 🎨 **Arquitetura MVC** - Padrão de desenvolvimento
+- 📊 **MySQL** - Banco de dados relacional
+- 🔄 **Git & GitHub** - Controle de versão
+- 🎯 **Regras de Negócio** - Implementação de lógica empresarial
 
 ---
 
@@ -51,18 +59,71 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 
 ---
 
-## 📂 Projetos Acadêmicos e Profissionais
-> *(Nenhum projeto solicitado/realizado no momento durante a formação acadêmica)*  
+## 📂 Projetos Desenvolvidos
 
-[📑 Veja minhas **Habilidades e Competências (Slides em PDF)**](slides/habilidades.pdf)
+### 🎓 Projetos Acadêmicos/Pessoais
+- **Superação e Equilíbrio** - Sistema completo Java/Spring + Frontend para ajuda com dependências
+- **WBS - Web Barber Scheduling** - Sistema de agendamento para barbearias (em desenvolvimento)
+
+### 💼 Projetos Profissionais  
+- **SAW - Sistema de Atendimento Web** - Sistema enterprise para operadoras de saúde
+- **Manutenção e Evolução** - Aplicações corporativas em produção
+
+[🔗 Acesse a seção de projetos](#projects)
+
+---
+
+## 📜 Certificações
+Possuo **12 certificações** em tecnologias e desenvolvimento, incluindo:
+
+- ☕ Java Básico ao Avançado (Loiane Training, Alura)
+- 🌐 HTML5 e Desenvolvimento Web (Curso em Vídeo)
+- ☁️ Cloud Computing e Projetos em Nuvem (Alura)
+- 🔄 Versionamento com Git e GitHub (DIO)
+- 🧠 Inteligência Emocional e Liderança (Estácio)
+
+[📑 Ver todos os certificados](#certificates)
 
 ---
 
 ## 📢 Recomendações e Testemunhos
-> *(Sem recomendações no momento – em breve serão adicionadas contribuições de professores, colegas e supervisores.)*  
+
+> **"Guilherme demonstra grande potencial e é muito dedicado no aprendizado de desenvolvimento. Se continuar assim, vai longe e poderá se tornar um desenvolvedor nível Pleno em pouco tempo."**
+>
+> **Robson Alves - Tech Lead**  
+> *TRIX - Tecnologia Inteligente*
 
 ---
 
-## 🎯 Outros
-- Participação em cursos e treinamentos extras para fortalecimento técnico  
-- Dedicação ao estudo contínuo de novas tecnologias e boas práticas de desenvolvimento
+## 🎯 Desenvolvimento Contínuo
+- Participação ativa em cursos e treinamentos extras
+- Dedicação ao estudo contínuo de novas tecnologias  
+- Desenvolvimento de projetos pessoais para ampliar portfólio
+- Contribuição para comunidades de desenvolvimento
+
+---
+
+## 🚀 Tecnologias Utilizadas neste Portfólio
+- **HTML5** - Estrutura semântica
+- **CSS3** - Estilização moderna e responsiva
+- **JavaScript** - Interatividade e funcionalidades
+- **GitHub Pages** - Hospedagem e deploy contínuo
+
+---
+
+## 📞 Como Contribuir ou Entrar em Contato
+1. Acesse o [portfólio online](https://guigomes2001.github.io)
+2. Utilize os links de contato na seção dedicada
+3. Conecte-se via LinkedIn para oportunidades profissionais
+4. Explore os projetos e dê feedback
+
+---
+
+## 📊 Estatísticas do Repositório
+![GitHub last commit](https://img.shields.io/github/last-commit/guigomes2001/portifolioHUB)
+![GitHub repo size](https://img.shields.io/github/repo-size/guigomes2001/portifolioHUB)
+![GitHub languages](https://img.shields.io/github/languages/top/guigomes2001/portifolioHUB)
+
+---
+
+> 💡 *Este portfólio está em constante evolução, assim como minha carreira profissional. Novos projetos e conquistas serão adicionados regularmente.*
