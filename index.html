@@ -425,7 +425,7 @@
                             <div class="slide-details">
                                 <div class="detail-item">
                                     <i class="fas fa-file-pdf"></i>
-                                    <span>1 slide(s)</span>
+                                    <span>8 slide(s)</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-clock"></i>
@@ -448,7 +448,7 @@
                     <span class="close-modal">&times;</span>
                     <h3 id="modalTitle">Visualização da Apresentação</h3>
                     <div class="modal-viewer">
-                        <a href="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/guigomes2001/portifolioHUB/main/assets/docs/habilidades.pdf">
+                        <a href="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/guigomes2001/portifolioHUB/main/assets/docs/apresentacao.pdf">
                         </a>
                     </div>
                     <div class="modal-actions">
@@ -484,6 +484,48 @@
         </section>
     </main>
 
+    <section id="share" class="section share-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-share-alt"></i> Compartilhe Meu Portfólio</h2>
+                <p class="section-subtitle">Gostou do meu trabalho? Compartilhe com outros!</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="share-content">
+                <div class="portfolio-link">
+                    <input type="text" id="portfolioUrl" value="https://github.com/guigomes2001/portifolioHUB" readonly>
+                    <button id="copyLinkBtn" class="btn btn-primary">
+                        <i class="fas fa-copy"></i> Copiar Link
+                    </button>
+                </div>
+                
+                <div class="social-share">
+                    <p>Compartilhar nas redes sociais:</p>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn linkedin" data-platform="linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="share-btn whatsapp" data-platform="whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="share-btn twitter" data-platform="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="share-btn facebook" data-platform="facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="qr-code">
+                    <p>Acesse por QR Code:</p>
+                    <div id="qrcode"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="container">
             <p>© 2025 - Portfólio de Guilherme Gomes</p>
@@ -497,6 +539,8 @@
     <script src="script.js"></script>
     <script src="certificados.js"></script>
     <script src="multimidia.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
 </body>
 </html>

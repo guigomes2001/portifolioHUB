@@ -127,3 +127,53 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// Compartilhamento e QR Code
+document.addEventListener('DOMContentLoaded', function() {
+    // Copiar link
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+    const portfolioUrl = document.getElementById('portfolioUrl');
+    
+    copyLinkBtn.addEventListener('click', function() {
+        portfolioUrl.select();
+        document.execCommand('copy');
+        
+        // Feedback visual
+        const originalText = copyLinkBtn.innerHTML;
+        copyLinkBtn.innerHTML = '<i class="fas fa-check"></i> Link Copiado!';
+        
+        setTimeout(() => {
+            copyLinkBtn.innerHTML = originalText;
+        }, 2000);
+    });
+    
+    // Compartilhamento em redes sociais
+    const shareButtons = document.querySelectorAll('.share-btn');
+    const url = encodeURIComponent(portfolioUrl.value);
+    const title = encodeURIComponent('Portfólio de Guilherme Gomes - Desenvolvedor Java');
+    
+    const shareUrls = {
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+        whatsapp: `https://wa.me/?text=${title} ${url}`,
+        twitter: `https://twitter.com/intent/tweet?text=${title}&url=${url}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    };
+    
+    shareButtons.forEach(button => {
+        const platform = button.getAttribute('data-platform');
+        button.setAttribute('href', shareUrls[platform]);
+        button.setAttribute('target', '_blank');
+    });
+    
+    // Gerar QR Code (requer biblioteca qrcode.js)
+    if (typeof QRCode !== 'undefined') {
+        new QRCode(document.getElementById('qrcode'), {
+            text: portfolioUrl.value,
+            width: 150,
+            height: 150,
+            colorDark : '#000000',
+            colorLight : '#ffffff',
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    }
+});

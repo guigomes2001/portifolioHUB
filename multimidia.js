@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mapeamento de slides para URLs (usando raw.githubusercontent.com)
     const slideFiles = {
-        'habilidades': 'https://raw.githubusercontent.com/guigomes2001/portifolioHUB/main/assets/docs/habilidades.pdf'
+        'habilidades': 'https://raw.githubusercontent.com/guigomes2001/portifolioHUB/main/assets/docs/apresentacao.pdf'
     };
     
     // Ao clicar, abrir direto no Google Docs Viewer em nova guia

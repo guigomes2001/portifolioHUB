@@ -870,3 +870,100 @@ body.dark-theme .btn.secondary:hover {
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+.share-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.share-section .section-title,
+.share-section .section-subtitle {
+    color: white;
+}
+
+.share-section .section-divider {
+    background: white;
+}
+
+.portfolio-link {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#portfolioUrl {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.8rem 1rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.social-share {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.share-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.share-btn.linkedin { background: #0077b5; }
+.share-btn.whatsapp { background: #25d366; }
+.share-btn.twitter { background: #1da1f2; }
+.share-btn.facebook { background: #3b5998; }
+
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.qr-code {
+    text-align: center;
+}
+
+#qrcode {
+    display: inline-block;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-link {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #portfolioUrl {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+}
