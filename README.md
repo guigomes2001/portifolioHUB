@@ -120,7 +120,7 @@ Possuo **12 certificações** em tecnologias e desenvolvimento, incluindo:
 ## 📊 Estatísticas do Repositório
 ![GitHub last commit](https://img.shields.io/github/last-commit/guigomes2001/portifolioHUB)
 ![GitHub repo size](https://img.shields.io/github/repo-size/guigomes2001/portifolioHUB)
-![GitHub languages](https://img.shields.io/github/languages/top/guigomes2001/portifolioHUB)
+![GitHub languages]([https://img.shields.io/github/languages/top/guigomes2001/portifolioHUB](https://github.com/guigomes2001))
 
 ---
 
