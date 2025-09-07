@@ -17,7 +17,7 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 - 💼 [LinkedIn](https://www.linkedin.com/in/guilherme-gomes-824880279/)  
 - 📸 [Instagram](https://www.instagram.com/gui_gomes_18/)  
 - 📧 [E-mail](mailto:gui.gomes@sempreceub.com)
-- 🌐 [Portfólio Online]([https://guigomes2001.github.io](https://github.com/guigomes2001))
+- 🌐 [Portfólio Online](https://github.com/guigomes2001)
 
 ---
 
