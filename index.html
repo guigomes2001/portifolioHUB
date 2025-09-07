@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Guilherme Gomes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="multimidia.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,6 +20,7 @@
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
+                <li><a href="#multimidia">Multimídia</a></li>
             </ul>
             <div class="theme-toggle">
                 <i class="fas fa-moon"></i>
@@ -378,7 +380,7 @@
                 </div>
                 <div class="skills-action">
                     <a href="https://github.com/guigomes2001/portifolioHUB/blob/main/assets/docs/habilidades.pdf" target="_blank" class="btn secondary">
-                        <i class="fas fa-file-pdf"></i> Ver PDF de Habilidades
+                        <i class="fas fa-file-pdf"></i> Ver currículo de Habilidades
                     </a>
                 </div>
             </div>
@@ -393,6 +395,66 @@
                         <i class="fas fa-rocket"></i>
                         <h3>Novos projetos em breve!</h3>
                         <p>Estou desenvolvendo projetos interessantes que em breve estarão disponíveis aqui.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="multimidia" class="section multimidia-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-presentation"></i> Apresentação Multimídia</h2>
+                    <p class="section-subtitle">Visualizações interativas das minhas habilidades e jornada</p>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="slides-container">
+                    <!-- Apresentação de Habilidades Técnicas -->
+                    <div class="slide-card">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Habilidades Técnicas">
+                            <div class="slide-overlay">
+                                <button class="view-slide" data-slide="habilidades">
+                                    <i class="fas fa-eye"></i> Visualizar Apresentação
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <h3 class="slide-title">Habilidades Técnicas</h3>
+                            <p class="slide-description">Apresentação detalhada das minhas competências em desenvolvimento Java, Spring Boot, Struts Framework e tecnologias relacionadas.</p>
+                            <div class="slide-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>1 slide(s)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Atualizado: Agosto 2025</span>
+                                </div>
+                            </div>
+                                <a href="https://github.com/guigomes2001/portifolioHUB/blob/main/assets/docs/habilidades.pdf" target="_blank" class="btn btn-view">
+                                    <i class="fas fa-external-link-alt"></i> Ver Online
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Modal para visualização de slides -->
+            <div id="slideModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3 id="modalTitle">Visualização da Apresentação</h3>
+                    <div class="modal-viewer">
+                        <a href="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/guigomes2001/portifolioHUB/main/assets/docs/habilidades.pdf">
+                        </a>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="#" id="modalDownload" class="btn btn-download" download>
+                            <i class="fas fa-download"></i> Baixar PDF
+                        </a>
                     </div>
                 </div>
             </div>
@@ -434,6 +496,7 @@
 
     <script src="script.js"></script>
     <script src="certificados.js"></script>
+    <script src="multimidia.js"></script>
 
 </body>
 </html>
