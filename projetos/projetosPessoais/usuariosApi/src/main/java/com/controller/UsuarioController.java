@@ -1,6 +1,7 @@
 package com.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,18 +21,23 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	
 	@PostMapping("/cadastrar")
-	public String cadastrarUsuario(@PathVariable UsuarioDTO usuario) {
+	public ResponseEntity<UsuarioDTO> cadastrarUsuario(@PathVariable UsuarioDTO usuario) {
 		UsuarioDTO usuarioWS = new UsuarioDTO();
 		
-		usuarioWS.setUsuario(usuario.getUsuario());
-		usuarioWS.setSenha(usuario.getSenha());
+		if(!NullUtil.isNullOrEmpty(usuario.getUsuario())) {
+			usuarioWS.setUsuario(usuario.getUsuario());
+		}
+		if(!NullUtil.isNullOrEmpty(usuario.getSenha())) {
+			usuarioWS.setSenha(usuario.getSenha());
+		}
 		
 		try {
 			getUsuarioService().cadastrarUsuario(usuarioWS);
 		} catch (Exception e) {
 			e.printStackTrace();
+			usuarioWS.setMensagem("Ocorreu um erro ao cadastrar o usuário " + usuario.getUsuario());
 		}
-		return usuarioWS.getMensagem();
+		return ResponseEntity.ok(usuarioWS);
 	}
 	
 	@GetMapping()

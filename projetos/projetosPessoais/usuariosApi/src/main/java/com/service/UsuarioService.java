@@ -17,7 +17,10 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	
 	public void cadastrarUsuario(UsuarioDTO usuarioWS) {
-		
+		getUsuarioRepository().save(usuarioWS);
+		if(true) {
+			usuarioWS.setMensagem("Usuário cadastrado com sucesso");
+		}
 	}
 	
 	private PessoaDTO getPessoa() {
