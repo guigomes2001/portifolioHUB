@@ -1,7 +1,9 @@
 📂 **Pasta de Projetos Pessoais**
 
 🎯 **Sobre**
-Este diretório é dedicado aos meus projetos pessoais! 🚀 Aqui você encontrará uma variedade de aplicações, experimentos e ideias que desenvolvo para aprender, praticar e inovar.
+Este diretório é dedicado aos meus projetos pessoais! 
+
+🚀 Aqui você encontrará uma variedade de aplicações, experimentos e ideias que desenvolvo para aprender, praticar e inovar.
 
 📦 **Estrutura de Pastas**
 Cada projeto está organizado em sua própria subpasta, contendo:
