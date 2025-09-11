@@ -14,7 +14,7 @@ Instruções de instalação e uso (quando aplicável).
 Os projetos podem incluir, mas não se limitam a:
 
 Linguagens: Java, Python, JavaScript, etc.
-Frameworks: Spring Boot, React, Node.js, Flask, etc.
+Frameworks: Spring Boot, React, etc.
 Ferramentas: Git, Docker, Maven, Gradle, etc.
 Bancos de Dados: MySQL, PostgreSQL, MongoDB, etc.
 
