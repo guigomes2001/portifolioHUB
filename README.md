@@ -64,7 +64,7 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 ### 🎓 Projetos Acadêmicos/Pessoais
 - **Superação e Equilíbrio** - Sistema completo Java/Spring + Frontend para ajuda com dependências
 - **WBS - Web Barber Scheduling** - Sistema de agendamento para barbearias (em desenvolvimento)
-- **UsariosAPI** - BackEnd en Java com SpringBoot para operações com logins ([Mais informações](https://github.com/guigomes2001/portifolioHUB/tree/main/projetos/projetosPessoais/usuariosApi))
+- **UsariosAPI** - BackEnd em Java com SpringBoot para operações com logins ([Mais informações](https://github.com/guigomes2001/portifolioHUB/tree/main/projetos/projetosPessoais/usuariosApi))
 
 ### 💼 Projetos Profissionais  
 - **SAW - Sistema de Atendimento Web** - Sistema enterprise para operadoras de saúde
