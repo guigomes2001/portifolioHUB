@@ -1,62 +1,61 @@
 package com.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dto.PessoaDTO;
 import com.dto.UsuarioDTO;
+import com.dto.UsuarioWSDTO;
 import com.service.UsuarioService;
-import com.util.NullUtil;
 
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
 	
-	@Autowired
 	private UsuarioService usuarioService;
 	
 	@PostMapping("/cadastrar")
-	public ResponseEntity<UsuarioDTO> cadastrarUsuario(@PathVariable UsuarioDTO usuario) {
-		UsuarioDTO usuarioWS = new UsuarioDTO();
-		
-		if(!NullUtil.isNullOrEmpty(usuario.getUsuario())) {
-			usuarioWS.setUsuario(usuario.getUsuario());
-		}
-		if(!NullUtil.isNullOrEmpty(usuario.getSenha())) {
-			usuarioWS.setSenha(usuario.getSenha());
-		}
-		
+	public ResponseEntity<UsuarioDTO> cadastrarUsuario(@RequestBody UsuarioWSDTO usuarioWS) {
+		UsuarioDTO usuario = new UsuarioDTO();
 		try {
 			getUsuarioService().cadastrarUsuario(usuarioWS);
 		} catch (Exception e) {
 			e.printStackTrace();
-			usuarioWS.setMensagem("Ocorreu um erro ao cadastrar o usuário " + usuario.getUsuario());
+			usuario.setMensagem("Ocorreu um erro ao cadastrar o usuário " + usuario.getLogin());
 		}
-		return ResponseEntity.ok(usuarioWS);
+		return ResponseEntity.ok(usuario);
 	}
 	
-	@GetMapping()
-	public UsuarioDTO pesquisarUsuario(@PathVariable PessoaDTO pessoa) {
+	@GetMapping("/{login}")
+	public ResponseEntity<UsuarioDTO> pesquisarUsuarioPorLogin(@PathVariable String login) {
 		UsuarioDTO usuario = new UsuarioDTO();
-		
-		if(!NullUtil.isNullOrEmpty(pessoa.getNome())) {
-			usuario.getPessoa().setNome(pessoa.getNome());
+		try {
+			getUsuarioService().pesquisarUsuarioPorLogin(login);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		if(!NullUtil.isNullOrEmpty(pessoa.getDataNascimento())) {
-			usuario.getPessoa().setDataNascimento(pessoa.getDataNascimento());
-		}
-		if(!NullUtil.isNullOrEmpty(pessoa.getCpf())) {
-			usuario.getPessoa().setCpf(pessoa.getCpf());
-		}
-		return null;
+		return ResponseEntity.ok().body(usuario);
 	}
 	
-	public UsuarioService getUsuarioService() {
+	@DeleteMapping("/excluirUsuario/{chave}")
+	public ResponseEntity<Void> excluirUsuario(@PathVariable Long chave) {
+		try {
+			getUsuarioService().excluirUsuarioPorChave(chave);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ResponseEntity.ok().build();
+	}
+	
+	private UsuarioService getUsuarioService() {
 		if (usuarioService == null) {
 			usuarioService = new UsuarioService();
 		}

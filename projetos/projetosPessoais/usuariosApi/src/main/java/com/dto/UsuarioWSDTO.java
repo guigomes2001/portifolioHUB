@@ -1,31 +1,21 @@
 package com.dto;
 
-import java.util.Date;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-public class UsuarioDTO {
+public class UsuarioWSDTO {
 	
 	private Long chave;
 	private String login;
 	private String senha;
-	private String tipoDeUsuario;
 	private PessoaDTO pessoa;
 	private String mensagem;
-	private Date dataExclusao;
 	
-	public UsuarioDTO() {
+	public UsuarioWSDTO() {
 		
 	}
 	
-	public UsuarioDTO(Long chave, String login, String senha, String tipoDeUsuario, Date dataExclusao) {
+	public UsuarioWSDTO(Long chave, String login, String senha) {
 		this.chave = chave;
 		this.login = login;
 		this.senha = senha;
-		this.tipoDeUsuario = tipoDeUsuario;
-		this.dataExclusao = dataExclusao;
 	}
 	
 	public Long getChave() {
@@ -52,22 +42,6 @@ public class UsuarioDTO {
 		this.senha = senha;
 	}
 	
-	public String getTipoDeUsuario() {
-		return tipoDeUsuario;
-	}
-	
-	public void setTipoDeUsuario(String tipoDeUsuario) {
-		this.tipoDeUsuario = tipoDeUsuario;
-	}
-	
-	public Date getDataExclusao() {
-		return dataExclusao;
-	}
-	
-	public void setDataExclusao(Date dataExclusao) {
-		this.dataExclusao = dataExclusao;
-	}
-	
 	public PessoaDTO getPessoa() {
 		if (pessoa == null) {
 			pessoa = new PessoaDTO();
@@ -87,3 +61,4 @@ public class UsuarioDTO {
 		this.mensagem = mensagem;
 	}
 }
+

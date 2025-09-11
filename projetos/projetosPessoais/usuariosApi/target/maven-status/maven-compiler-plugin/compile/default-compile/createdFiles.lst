@@ -1,0 +1,7 @@
+com\dto\PessoaDTO.class
+com\dto\UsuarioDTO.class
+com\controller\UsuarioController.class
+com\util\NullUtil.class
+com\dto\UsuarioWSDTO.class
+com\respository\UsuarioRepository.class
+com\service\UsuarioService.class
