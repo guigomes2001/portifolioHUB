@@ -75,7 +75,7 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 ## 📂 Contribuição com projetos terceiros
 - Contribui com uma alteração de um README.md de desafio de um curso no qual o código fonte é open source.
 - Pull Request realizado para o código main do respositório que contribui.
-- Projeto contribuinte em https://github.com/digitalinnovationone/dio-lab-open-source/pull/69783 
+- Projeto contribuinte em https://github.com/digitalinnovationone/dio-lab-open-source/pull/69783 com pull request guigomes2001:guigomes2001-patch-1
 
 ## 📜 Certificações
 Possuo **12 certificados** em tecnologias e desenvolvimento, incluindo:
