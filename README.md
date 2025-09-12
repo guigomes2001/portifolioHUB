@@ -72,8 +72,13 @@ Ele foi planejado como uma ferramenta tanto acadêmica quanto profissional, para
 
 ---
 
+## 📂 Contribuição com projetos terceiros
+- Contribui com uma alteração de um README.md de desafio de um curso no qual o código fonte é open source.
+- Pull Request realizado para o código main do respositório que contribui.
+- Projeto contribuinte em https://github.com/digitalinnovationone/dio-lab-open-source/pull/69783 
+
 ## 📜 Certificações
-Possuo **12 certificações** em tecnologias e desenvolvimento, incluindo:
+Possuo **12 certificados** em tecnologias e desenvolvimento, incluindo:
 
 - ☕ Java Básico ao Avançado (Loiane Training, Alura)
 - 🌐 HTML5 e Desenvolvimento Web (Curso em Vídeo)
