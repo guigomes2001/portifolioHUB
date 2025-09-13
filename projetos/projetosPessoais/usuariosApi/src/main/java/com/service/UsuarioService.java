@@ -1,19 +1,17 @@
 package com.service; 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dao.UsuarioDAO;
-import com.dto.PessoaDTO;
 import com.dto.UsuarioDTO;
 import com.dto.UsuarioWSDTO;
-import com.respository.UsuarioRepository;
 import com.util.NullUtil;
 
 @Service
 public class UsuarioService {
 	
-	private @Autowired UsuarioWSDTO usuarioWS;
+	private UsuarioWSDTO usuarioWS;
+	private UsuarioDTO usuario;
 	private UsuarioDAO usuarioDAO; 
 	
 	public void cadastrarUsuario(UsuarioWSDTO usuarioWS) {
@@ -23,10 +21,26 @@ public class UsuarioService {
 	
 	private void cadastrarUsuario() {
 		UsuarioDTO usuario = definirUsuario(getUsuarioWS());
-		int retorno = 0;
-		retorno = getUsuarioDAO().cadastrarUsuario(usuario);
-		if(retorno > 0) {
-			getUsuarioWS().setMensagem("Usuário cadastrado com sucesso");
+		getUsuarioDAO().cadastrarUsuario(usuario);
+	}
+	
+	public void atualizarUsuario(UsuarioDTO usuario) {
+		setUsuario(usuario);
+		atualizarUsuario();
+	}
+	
+	private void atualizarUsuario() {
+		UsuarioDTO usuarioCapturado = getUsuarioDAO().capturarUsuarioPorChave(getUsuarioWS().getChave());
+		if(!NullUtil.isNullOrEmpty(usuarioCapturado)) {
+			getUsuarioDAO().atualizarUsuario(getUsuario());
+		}
+	}
+
+	public void excluirUsuarioPorChave(Long chave) {
+		try {
+			getUsuarioDAO().excluirUsuarioPorChave(chave);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
@@ -38,15 +52,6 @@ public class UsuarioService {
 			e.printStackTrace();
 		}
 		return usuarioCapturado;
-	}
-	
-	
-	public void excluirUsuarioPorChave(Long chave) {
-		try {
-			getUsuarioDAO().excluirUsuarioPorChave(chave);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 	
 	private UsuarioDTO definirUsuario(UsuarioWSDTO usuarioWS) {
@@ -76,8 +81,19 @@ public class UsuarioService {
 		return usuarioWS;
 	}
 	
-	public void setUsuarioWS(UsuarioWSDTO usuarioWS) {
+	private void setUsuarioWS(UsuarioWSDTO usuarioWS) {
 		this.usuarioWS = usuarioWS;
+	}
+	
+	private UsuarioDTO getUsuario() {
+		if (usuario == null) {
+			usuario = new UsuarioDTO();
+		}
+		return usuario;
+	}
+	
+	private void setUsuario(UsuarioDTO usuario) {
+		this.usuario = usuario;
 	}
 	
 	private UsuarioDAO getUsuarioDAO() {

@@ -1,13 +1,11 @@
 package com.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,6 +32,28 @@ public class UsuarioController {
 		return ResponseEntity.ok(usuario);
 	}
 	
+	@PutMapping("/atualizarUsuario")
+	public ResponseEntity<UsuarioDTO> atualizarUsuario(@RequestBody UsuarioDTO usuario) {
+		UsuarioDTO usuarioDTO = new UsuarioDTO();
+		try {
+			getUsuarioService().atualizarUsuario(usuario);
+		} catch (Exception e) {
+			e.printStackTrace();
+			usuarioDTO.setMensagem("Ocorreu um erro ao atualizar o usuário " + usuario.getLogin());
+		}
+		return ResponseEntity.ok(usuario);
+	}
+	
+	@DeleteMapping("/excluir/{id}")
+	public ResponseEntity<Void> excluirUsuario(@PathVariable("id") Long chave) {
+		try {
+			getUsuarioService().excluirUsuarioPorChave(chave);
+		} catch (Exception e) {
+			e.printStackTrace();	
+		}
+		return ResponseEntity.ok().build();
+	}
+	
 	@GetMapping("/{login}")
 	public ResponseEntity<UsuarioDTO> pesquisarUsuarioPorLogin(@PathVariable String login) {
 		UsuarioDTO usuario = new UsuarioDTO();
@@ -45,15 +65,6 @@ public class UsuarioController {
 		return ResponseEntity.ok().body(usuario);
 	}
 	
-	@DeleteMapping("/excluirUsuario/{chave}")
-	public ResponseEntity<Void> excluirUsuario(@PathVariable Long chave) {
-		try {
-			getUsuarioService().excluirUsuarioPorChave(chave);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return ResponseEntity.ok().build();
-	}
 	
 	private UsuarioService getUsuarioService() {
 		if (usuarioService == null) {
