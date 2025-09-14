@@ -21,17 +21,8 @@
 
 📁 **Estrutura do Projeto**
 
-src/
-└── main/
-    └── java/
-        └── com/
-            ├── controller/
-            │   └── UsuarioController.java   → Controlador REST
-            ├── dto/
-            │   ├── UsuarioDTO.java          → DTO para resposta
-            │   └── UsuarioWSDTO.java        → DTO para requisição
-            └── service/
-                └── UsuarioService.java      → Lógica de negócio
+<img width="712" height="344" alt="image" src="https://github.com/user-attachments/assets/8bcf7831-bd46-428f-aca6-f0b926451ea6" />
+
 
 
 🔌** Como Usar os Endpoints**
